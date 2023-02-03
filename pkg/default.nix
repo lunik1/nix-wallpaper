@@ -21,7 +21,7 @@ rec {
   density = 1200;
   # 72 is the default density
   # 323 is the height of the image rendered by default
-  scale = 72. / density * height / 323. * 100;
+  scale = 72.0 / density * height / 323.0 * 100;
 } ''
   mkdir -p $out/share/wallpapers
   substituteAll ${../data/svg/wallpaper.svg} wallpaper.svg
