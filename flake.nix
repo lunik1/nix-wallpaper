@@ -16,19 +16,8 @@
     with inputs;
     flake-utils.lib.eachDefaultSystem (system:
       let pkgs = import nixpkgs { inherit system; };
-      in
-      {
-        packages.default = pkgs.runCommand "nix-wallpaper" { } ''
-          mkdir -p $out/bin
-          printf "#!${pkgs.bash}/bin/bash\n\nprintf 'Hello, world!\\n'" \
-            > $out/bin/nix-wallpaper
-          chmod +x $out/bin/nix-wallpaper
-        '';
-
-        apps.default = {
-          type = "app";
-          program = "${self.packages.${system}.default}/bin/nix-wallpaper";
-        };
+      in {
+        packages.default = pkgs.callPackage ./pkg { };
 
         devShells.default = with pkgs;
           mkShell {
@@ -37,8 +26,7 @@
               nixpkgs-fmt
               rnix-lsp
               statix
-
-              librsvg
+              imagemagick
             ];
           };
 
@@ -51,7 +39,8 @@
               nixpkgs-fmt.enable = true;
               copier-rejects = {
                 enable = true;
-                entry = "found Copier update rejection files; review them and remove them";
+                entry =
+                  "found Copier update rejection files; review them and remove them";
                 files = "\\.rej$";
                 language = "fail";
               };
