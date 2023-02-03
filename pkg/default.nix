@@ -8,18 +8,14 @@
 , logoSize ? 44.25
 
 , backgroundColor ? null
-, color0 ? null
-, color1 ? null
-, color2 ? null
-, color3 ? null
-, color4 ? null
-, color5 ? null
+, logoColors ? { }
 ,
 }:
 
 let
-  colorscheme = import ../data/presets/${preset}.nix //
-    lib.filterAttrs (_: v: v != null) { inherit backgroundColor color0 color1 color2 color3 color4 color5; };
+  colorscheme = import ../data/presets/${preset}.nix
+    // logoColors //
+    lib.optionalAttrs (backgroundColor != null) { inherit backgroundColor; };
 in
 runCommandLocal "nix-wallpaper"
 rec {
