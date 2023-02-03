@@ -1,22 +1,30 @@
-{ runCommandLocal
+{ lib
+, runCommandLocal
 , imagemagick
 
-, bg_color ? "#ffffff"
-, color0 ? "#7ebae4"
-, color1 ? "#5277c3"
-, color2 ? "#7ebae4"
-, color3 ? "#5277c3"
-, color4 ? "#7ebae4"
-, color5 ? "#5277c3"
+, preset ? "official"
 , width ? 3480
 , height ? 2160
 , logoSize ? 44.25
+
+, bg_color ? null
+, color0 ? null
+, color1 ? null
+, color2 ? null
+, color3 ? null
+, color4 ? null
+, color5 ? null
 ,
 }:
 
+let
+  colorscheme = import ../data/presets/${preset}.nix //
+    lib.filterAttrs (_: v: v != null) { inherit bg_color color0 color1 color2 color3 color4 color5; };
+in
 runCommandLocal "nix-wallpaper"
 rec {
-  inherit color0 color1 color2 color3 color4 color5 bg_color width height;
+  inherit width height;
+  inherit (colorscheme) color0 color1 color2 color3 color4 color5 bg_color;
   buildInputs = [ imagemagick ];
   density = 1200;
   # 72 is the default density
