@@ -13,6 +13,29 @@
 }:
 
 let
+  isNixFile = file: type: (lib.hasSuffix ".nix" file && type == "regular");
+  isColor = str: builtins.isString str && (builtins.isList (builtins.match "^#[0-9a-fA-F]{6}$" str));
+in
+
+assert builtins.isInt width && width > 0;
+assert builtins.isInt height && height > 0;
+assert (builtins.isInt logoSize || builtins.isFloat logoSize) && logoSize >= 0;
+assert builtins.isString preset;
+assert lib.assertMsg
+  (lib.hasAttr "${preset}.nix"
+    (lib.filterAttrs isNixFile (builtins.readDir ../data/presets)))
+  "unknown preset \"${preset}\"";
+assert lib.assertMsg (backgroundColor == null || isColor backgroundColor)
+  "backgroundColor should be a 6-digit hex code";
+assert lib.assertMsg (builtins.all isColor (lib.attrValues logoColors))
+  "logoColors should contain 6-digit hex codes";
+assert lib.assertMsg
+  (builtins.all
+    (str: builtins.isList (builtins.match "^color[0-5]$" str))
+    (lib.attrNames logoColors))
+  "logoColors should contain keys named color[0-5]";
+
+let
   colorscheme = import ../data/presets/${preset}.nix
     // logoColors //
     lib.optionalAttrs (backgroundColor != null) { inherit backgroundColor; };
