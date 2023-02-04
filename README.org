@@ -1,0 +1,75 @@
+#+title: nix-wallpaper
+
+This flake provides a package that generates a wallpaper featuring the Nix
+logo, which can be customised by overriding that package. The following
+properties can be overridden:
+ + =width= :: the width (in pixels) of the generated wallpaper (defaults to 3480)
+ + =height= :: the height (in pixels) of the generated wallpaper (defaults to 2160)
+ + =logoSize= :: the size of the flake logo, expressed as a percentage of the
+   height of the wallpaper (defaults to 44.25)
+ + =backgroundColor= :: the color of the background, expressed as a hexadecimal triplet (e.g. =#7ebae4=)
+ + =logoColors= :: the colors used in the logo. This should be an =attrSet=
+   containing keys =color[0-5]= where =color0= refers to the lambda with a leg
+   at the 12 o'clock position and the numbering continues clockwise. Keys can be
+   omitted. Colors should be hexadecimal triplets (e.g. =#5277c3=).
+ + =preset= :: Use a preset colorscheme, see [[#Presets][Presets]]
+
+By default, the official logo colors with a white background are used.
+
+* Example usage
+To generate a wallpaper with the gruvbox-dark preset:
+#+begin_src sh
+nix build --impure --expr '(builtins.getFlake "github:lunik1/nix-wallpaper").packages.x86_64-linux.default.override { preset = "gruvbox-dark"; }'
+#+end_src
+The resulting wallpaper will be in =result/share/wallpapers/nixos-wallpaper.png=.
+
+* Presets
+This repository contains a number of pre-set colorschemes, found in
+=data/presets/=. Colors specified =backgroundColor= and =logoColors= will take
+priority over colors in a preset.
+** List of presets
++ albania
++ bangladesh
++ catppuccin-frappe
++ catppuccin-frappe-rainbow
++ catppuccin-latte
++ catppuccin-latte-rainbow
++ catppuccin-macchiato
++ catppuccin-macchiato-rainbow
++ catppuccin-mocha
++ catppuccin-mocha-rainbow
++ community
++ gruvbox-dark
++ gruvbox-dark-rainbow
++ gruvbox-light
++ gruvbox-light-rainbow
++ kyrgyzstan
++ nisshoki
++ nix-emacs
++ nord-night
++ nord-night-aurora
++ nord-snow
++ nord-snow-aurora
++ official
++ old-logo
++ palau
++ solarized-dark
++ solarized-dark-rainbow
++ solarized-light
++ solarized-light-rainbow
++ somalia
++ swiss-cross
++ taegukgi
++ ubuntu
++ ubuntu-2004
++ vietnam
++ void
+
+* Credits
+NixOS Logo designed by Tim Cuthbertson
+
+* License
+Code in this repository is licensed under the BSD-2-Clause Plus Patent License.
+
+The NixOS logo is licensed under the Creative Commons Attribution 4.0
+International License.
