@@ -29,41 +29,113 @@ This repository contains a number of pre-set colorschemes, found in
 priority over colors in a preset.
 ** List of presets
 + albania
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/albania.png]]
 + bangladesh
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/bangladesh.png]]
 + catppuccin-frappe
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/catppuccin-frappe.png]]
 + catppuccin-frappe-rainbow
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/catppuccin-frappe-rainbow.png]]
 + catppuccin-latte
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/catppuccin-latte.png]]
 + catppuccin-latte-rainbow
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/catppuccin-latte-rainbow.png]]
 + catppuccin-macchiato
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/catppuccin-macchiato.png]]
 + catppuccin-macchiato-rainbow
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/catppuccin-macchiato-rainbow.png]]
 + catppuccin-mocha
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/catppuccin-mocha.png]]
 + catppuccin-mocha-rainbow
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/catppuccin-mocha-rainbow.png]]
 + community
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/community.png]]
 + gruvbox-dark
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/gruvbox-dark.png]]
 + gruvbox-dark-rainbow
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/gruvbox-dark-rainbow.png]]
 + gruvbox-light
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/gruvbox-light.png]]
 + gruvbox-light-rainbow
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/gruvbox-light-rainbow.png]]
 + kyrgyzstan
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/kyrgyzstan.png]]
 + nisshoki
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/nisshoki.png]]
 + nix-emacs
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/nix-emacs.png]]
 + nord-night
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/nord-night.png]]
 + nord-night-aurora
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/nord-night-aurora.png]]
 + nord-snow
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/nord-snow.png]]
 + nord-snow-aurora
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/nord-snow-aurora.png]]
 + official
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/official.png]]
 + old-logo
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/old-logo.png]]
 + palau
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/palau.png]]
 + solarized-dark
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/solarized-dark.png]]
 + solarized-dark-rainbow
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/solarized-dark-rainbow.png]]
 + solarized-light
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/solarized-light.png]]
 + solarized-light-rainbow
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/solarized-light-rainbow.png]]
 + somalia
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/somalia.png]]
 + swiss-cross
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/swiss-cross.png]]
 + taegukgi
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/taegukgi.png]]
 + ubuntu
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/ubuntu.png]]
 + ubuntu-2004
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/ubuntu-2004.png]]
 + vietnam
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/vietnam.png]]
 + void
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/void.png]]
 
 * Credits
 NixOS Logo designed by Tim Cuthbertson
