@@ -9,7 +9,9 @@
 
 , backgroundColor ? null
 , logoColors ? { }
-,
+
+  # secret option for source-code readers
+, widdershins ? false
 }:
 
 let
@@ -34,6 +36,7 @@ assert lib.assertMsg
     (str: builtins.isList (builtins.match "^color[0-5]$" str))
     (lib.attrNames logoColors))
   "logoColors should contain keys named color[0-5]";
+assert builtins.isBool widdershins;
 
 let
   colorscheme = import ../data/presets/${preset}.nix
@@ -49,6 +52,7 @@ rec {
   # 72 is the default density
   # 323 is the height of the image rendered by default
   scale = 72.0 / density * height / 323.0 * logoSize;
+  flop = if widdershins then "-flop" else "";
 } ''
   mkdir -p $out/share/wallpapers
   substituteAll ${../data/svg/wallpaper.svg} wallpaper.svg
@@ -58,5 +62,6 @@ rec {
     -background $backgroundColor \
     -gravity center \
     -extent ''${width}x''${height} \
+    $flop \
     wallpaper.svg $out/share/wallpapers/nixos-wallpaper.png
 ''
