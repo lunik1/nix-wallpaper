@@ -22,7 +22,7 @@
         devShells.default = with pkgs;
           mkShell {
             inherit (self.checks.${system}.pre-commit-check) shellHook;
-            buildInputs = [
+            packages = [
               nixpkgs-fmt
               rnix-lsp
               statix
