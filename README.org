@@ -19,7 +19,7 @@ By default, the official logo colors with a white background are used.
 * Example usage
 To generate a wallpaper with the gruvbox-dark preset:
 #+begin_src sh
-nix build --impure --expr '(builtins.getFlake "github:lunik1/nix-wallpaper").packages.x86_64-linux.default.override { preset = "gruvbox-dark"; }'
+nix build --impure --expr '(builtins.getFlake "github:lunik1/nix-wallpaper").packages.${builtins.currentSystem}.default.override { preset = "gruvbox-dark"; }'
 #+end_src
 The resulting wallpaper will be in =result/share/wallpapers/nixos-wallpaper.png=.
 
