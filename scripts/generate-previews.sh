@@ -25,7 +25,7 @@ for f in "${dir}"/../data/presets/*.nix; do
 
   nix build \
     --impure \
-    --expr "(builtins.getFlake \"github:lunik1/nix-wallpaper\").packages.\${builtins.currentSystem}.default.override { width = 150; height = 150; logoSize = 80; preset = \"${theme}\"; }"
+    --expr "(builtins.getFlake \"${dir}/..\").packages.\${builtins.currentSystem}.default.override { width = 150; height = 150; logoSize = 80; preset = \"${theme}\"; }"
   install -m644 result/share/wallpapers/nixos-wallpaper.png "${out}/${theme}.png"
 done
 
