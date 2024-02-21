@@ -1,5 +1,7 @@
 #!/usr/bin/env sh
 
+set -eu
+
 basename() {
     dir=${1%"${1##*[!/]}"}
     dir=${dir##*/}
