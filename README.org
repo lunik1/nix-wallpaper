@@ -61,6 +61,9 @@ priority over colors in a preset.
 + community
 
   [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/community.png]]
++ google
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/google.png]]
 + gruvbox-dark
 
   [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/gruvbox-dark.png]]
