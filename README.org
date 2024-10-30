@@ -7,11 +7,13 @@ properties can be overridden:
  + =height= :: the height (in pixels) of the generated wallpaper (defaults to 2160)
  + =logoSize= :: the size of the flake logo, expressed as a percentage of the
    height of the wallpaper (defaults to 44.25)
- + =backgroundColor= :: the color of the background, expressed as a hexadecimal triplet (e.g. =#7ebae4=)
+ + =backgroundColor= :: the color of the background, expressed as a 6 or
+   8-digit hexadecimal number, where the last 2 digits optionally specify the
+   opacity (e.g. =#7ebae4= or =#6b34ab66=)
  + =logoColors= :: the colors used in the logo. This should be an =attrSet=
    containing keys =color[0-5]= where =color0= refers to the lambda with a leg
    at the 12 o'clock position and the numbering continues clockwise. Keys can be
-   omitted. Colors should be hexadecimal triplets (e.g. =#5277c3=).
+   omitted. Colors should be like in =backgroundColor=.
  + =preset= :: Use a preset colorscheme, see [[#Presets][Presets]]
 
 By default, the official logo colors with a white background are used.
