@@ -71,7 +71,7 @@ rec {
 } ''
   mkdir -p $out/share/wallpapers
   substituteAll ${../data/svg/wallpaper.svg} wallpaper.svg
-  convert \
+  magick \
     -resize ''${scale}% \
     -density $density \
     -background ''${backgroundColor}''${backgroundOpacity} \
