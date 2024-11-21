@@ -23,7 +23,7 @@
             inherit (self.checks.${system}.pre-commit-check) shellHook;
             packages = [
               nixpkgs-fmt
-              rnix-lsp
+              nil
               statix
               imagemagick
             ];
