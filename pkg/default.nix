@@ -4,7 +4,7 @@
   imagemagick,
 
   preset ? "official",
-  width ? 3480,
+  width ? 3840,
   height ? 2160,
   logoSize ? 44.25,
 
