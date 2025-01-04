@@ -3,7 +3,7 @@
 This flake provides a package that generates a wallpaper featuring the Nix
 logo, which can be customised by overriding that package. The following
 properties can be overridden:
- + =width= :: the width (in pixels) of the generated wallpaper (defaults to 3480)
+ + =width= :: the width (in pixels) of the generated wallpaper (defaults to 3840)
  + =height= :: the height (in pixels) of the generated wallpaper (defaults to 2160)
  + =logoSize= :: the size of the flake logo, expressed as a percentage of the
    height of the wallpaper (defaults to 44.25)
