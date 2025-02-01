@@ -132,6 +132,9 @@ priority over colors in a preset.
 + ubuntu
 
   [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/ubuntu.png]]
++ transrights
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/transrights.png]]
 + ubuntu-2004
 
   [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/ubuntu-2004.png]]
