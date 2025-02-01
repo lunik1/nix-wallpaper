@@ -91,12 +91,13 @@ runCommandLocal "nix-wallpaper"
   ''
     mkdir -p $out/share/wallpapers
     substituteAll ${../data/svg/wallpaper.svg} wallpaper.svg
-    magick convert \
-      -resize ''${scale}% \
+    magick \
       -density $density \
       -background ''${backgroundColor}''${backgroundOpacity} \
+      wallpaper.svg \
+      -resize ''${scale}% \
       -gravity center \
       -extent ''${width}x''${height} \
       $flop \
-      wallpaper.svg $out/share/wallpapers/nixos-wallpaper.png
+      $out/share/wallpapers/nixos-wallpaper.png
   ''
