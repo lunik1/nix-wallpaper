@@ -7,6 +7,11 @@
   width ? 3840,
   height ? 2160,
   logoSize ? 44.25,
+  fontFamily ? "DejaVueSans",
+  fontSize ? 150,
+  fontColor ? "black",
+  taglineOffset ? { x = 0; y = 0; },
+  tagline ? "",
 
   backgroundColor ? null,
   logoColors ? { },
@@ -64,7 +69,9 @@ let
 in
 runCommandLocal "nix-wallpaper"
   rec {
-    inherit width height;
+    inherit width height fontFamily fontSize fontColor tagline;
+    taglineX = taglineOffset.x;
+    taglineY = taglineOffset.y;
     inherit (colorscheme)
       color0
       color1
@@ -99,5 +106,12 @@ runCommandLocal "nix-wallpaper"
       -gravity center \
       -extent ''${width}x''${height} \
       $flop \
+  '' + lib.optionalString (tagline != "") ''
+      -font ''${fontFamily} \
+      -pointsize ''${fontSize} \
+      -fill ''${fontColor} \
+      -gravity center \
+      -annotate +''${taglineX}+''${taglineY} "''${tagline}" \
+  '' + ''
       $out/share/wallpapers/nixos-wallpaper.png
   ''
