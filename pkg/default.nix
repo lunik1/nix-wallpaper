@@ -91,7 +91,7 @@ runCommandLocal "nix-wallpaper"
   ''
     mkdir -p $out/share/wallpapers
     substituteAll ${../data/svg/wallpaper.svg} wallpaper.svg
-    magick \
+    ${lib.getExe imagemagick} \
       -density $density \
       -background ''${backgroundColor}''${backgroundOpacity} \
       wallpaper.svg \
