@@ -1,4 +1,3 @@
-# easter egg 🏳️‍⚧️
 rec {
   backgroundColor = "#ffffff";
   color0 = "#f5a9b8";
