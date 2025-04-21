@@ -66,8 +66,8 @@ in
 runCommandLocal "nix-wallpaper"
   rec {
     inherit width height;
-    logoX = logoOffset.x;
-    logoY = logoOffset.y;
+    logoX = logoOffset.x or 0;
+    logoY = logoOffset.y or 0;
     inherit (colorscheme)
       color0
       color1
