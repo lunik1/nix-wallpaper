@@ -132,12 +132,12 @@ priority over colors in a preset.
 + taegukgi
 
   [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/taegukgi.png]]
-+ ubuntu
-
-  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/ubuntu.png]]
 + transrights
 
   [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/transrights.png]]
++ ubuntu
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/ubuntu.png]]
 + ubuntu-2004
 
   [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/ubuntu-2004.png]]
