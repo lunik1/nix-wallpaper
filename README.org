@@ -105,6 +105,9 @@ priority over colors in a preset.
 + old-logo
 
   [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/old-logo.png]]
++ pride
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/pride.png]]
 + palau
 
   [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/palau.png]]
