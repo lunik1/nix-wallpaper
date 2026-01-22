@@ -147,6 +147,9 @@ priority over colors in a preset.
 + void
 
   [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/void.png]]
++ wsl
+
+  [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/wsl.png]]
 
 * Credits
 NixOS Logo designed by Tim Cuthbertson
