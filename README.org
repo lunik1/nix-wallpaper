@@ -152,7 +152,7 @@ priority over colors in a preset.
   [[https://media.githubusercontent.com/media/lunik1/nix-wallpaper/assets/wsl.png]]
 
 * Credits
-NixOS Logo designed by Tim Cuthbertson
+“NixOS Logo” by [[https://github.com/simon-frankau][Simon Frankau]], [[https://github.com/timbertson][Tim Cuthbertson]], and [[https://github.com/djacu][Daniel Baker]] (maintained by the [[https://nixos.org/community/teams/marketing/][NixOS Marketing Team]]), from [[https://github.com/NixOS/branding][nixos/branding]], licensed under [[https://creativecommons.org/licenses/by/4.0/][CC BY 4.0]].
 
 * License
 Code in this repository is licensed under the BSD-2-Clause Plus Patent License.

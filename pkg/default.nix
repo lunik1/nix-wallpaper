@@ -82,10 +82,10 @@ runCommandLocal "nix-wallpaper"
       backgroundOpacity
       ;
     buildInputs = [ imagemagick ];
-    density = 1200;
+    density = 300;
     # 72 is the default density
-    # 323 is the height of the image rendered by default
-    scale = 72.0 / density * height / 323.0 * logoSize;
+    # 1496 is the height of the image rendered by default
+    scale = 72.0 / density * height / 1496.0 * logoSize;
     flop = if widdershins then "-flop" else "";
   }
   ''
