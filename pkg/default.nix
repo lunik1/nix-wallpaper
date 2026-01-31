@@ -7,6 +7,7 @@
   width ? 3840,
   height ? 2160,
   logoSize ? 44.25,
+  logoOffset ? { x = 0; y = 0; },
 
   backgroundColor ? null,
   logoColors ? { },
@@ -65,6 +66,8 @@ in
 runCommandLocal "nix-wallpaper"
   rec {
     inherit width height;
+    logoX = logoOffset.x or 0;
+    logoY = logoOffset.y or 0;
     inherit (colorscheme)
       color0
       color1
@@ -97,7 +100,7 @@ runCommandLocal "nix-wallpaper"
       wallpaper.svg \
       -resize ''${scale}% \
       -gravity center \
-      -extent ''${width}x''${height} \
+      -extent ''${width}x''${height}+''${logoX}+''${logoY} \
       $flop \
       $out/share/wallpapers/nixos-wallpaper.png
   ''
